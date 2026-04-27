@@ -1,0 +1,100 @@
+.events-section {
+  background-color: var(--bg-darker);
+  position: relative;
+}
+
+.events-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.intro-section {
+  max-width: 900px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #d0d0d0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.subsection-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.event-desc {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  margin-bottom: 2rem;
+}
+
+.image-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.grid-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.carousel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.carousel-img:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 992px) {
+  .image-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .carousel-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-img, .carousel-img {
+    height: 250px;
+  }
+}
