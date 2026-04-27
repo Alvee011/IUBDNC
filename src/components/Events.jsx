@@ -25,7 +25,7 @@ const Events = () => {
           </p>
           <div className="image-grid-3">
             <img src="/General Images/dance.jpg" alt="Dance Performance" className="grid-img" />
-            <img src="/General Images/iubdnc cover.jpg" alt="Dance Competition" className="grid-img" />
+            <img src="/General Images/Iftar 2.jpeg" alt="Dance Competition" className="grid-img" />
             <img src="/General Images/booth.jpg" alt="Competition Booth" className="grid-img" />
           </div>
         </FadeIn>

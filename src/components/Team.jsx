@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import FadeIn from './FadeIn';
 import './Team.css';
 
@@ -136,6 +137,44 @@ const teamData = [
   }
 ];
 
+const TeamCarousel = () => {
+  const images = [
+    "/General Images/all EB.jpg",
+    "/General Images/iubdnc cover.jpg",
+    "/General Images/faculty.png"
+  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="team-carousel-container">
+      <div className="team-carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {images.map((src, idx) => (
+          <div key={idx} className="team-carousel-slide">
+            <img src={src} alt={`Group ${idx}`} className="all-eb-image" />
+          </div>
+        ))}
+      </div>
+      <div className="team-carousel-dots">
+        {images.map((_, idx) => (
+          <button 
+            key={idx} 
+            className={`team-carousel-dot ${currentIndex === idx ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const TeamMember = ({ member, delay }) => (
   <FadeIn delay={delay}>
     <div className="team-card">
@@ -174,6 +213,10 @@ const Team = () => {
           <TeamMember key={i} member={member} delay={(i % 4) * 100} />
         ))}
       </div>
+
+      <FadeIn delay={200}>
+        <TeamCarousel />
+      </FadeIn>
     </section>
   );
 };
