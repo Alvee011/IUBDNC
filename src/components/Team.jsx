@@ -223,7 +223,7 @@ const Team = () => {
     <section id="team" className="team-section section">
       <FadeIn>
         <h2 className="section-title text-center">
-          Our <span className="text-gradient">Executive Body</span>
+          Our <span className="text-gradient">Executive Board</span>
         </h2>
         <p className="intro-text" style={{marginBottom: '3rem'}}>
           Meet the passionate individuals who lead and inspire the IUB Dance Club community.
