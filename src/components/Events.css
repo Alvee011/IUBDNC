@@ -150,7 +150,7 @@
     grid-template-columns: 1fr;
   }
   
-  .grid-img, .carousel-img {
+  .grid-img, .carousel-img, .recent-img-wrapper {
     height: 250px;
   }
 }
