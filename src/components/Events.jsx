@@ -1,5 +1,40 @@
+import { useState, useEffect } from 'react';
 import FadeIn from './FadeIn';
 import './Events.css';
+import './Events.css';
+
+const EventCarousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="event-carousel-container">
+      <div className="event-carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {images.map((src, idx) => (
+          <div key={idx} className="event-carousel-slide">
+            <img src={src} alt={`Slide ${idx}`} />
+          </div>
+        ))}
+      </div>
+      <div className="event-carousel-dots">
+        {images.map((_, idx) => (
+          <button 
+            key={idx} 
+            className={`event-carousel-dot ${currentIndex === idx ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(idx)}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const Events = () => {
   return (
@@ -38,7 +73,11 @@ const Events = () => {
           {/* Section 4: External Performances */}
           <FadeIn delay={100}>
             <div className="card">
-              <img src="/General Images/National Football Stadium.jpg" alt="AFC Asian Cup" />
+              <EventCarousel images={[
+                "/General Images/National Football Stadium.jpg",
+                "/General Images/southeast.JPG",
+                "/General Images/football.JPG"
+              ]} />
               <div className="card-content">
                 <h4 className="card-title">External Performances</h4>
                 <p className="card-text">
@@ -51,7 +90,13 @@ const Events = () => {
           {/* Section 5: University Events */}
           <FadeIn delay={200}>
             <div className="card">
-              <img src="/General Images/Convo.jpg" alt="IUB Convocation" />
+              <EventCarousel images={[
+                "/General Images/Convo.jpg",
+                "/General Images/university event BBB.JPG",
+                "/General Images/intra final.JPG",
+                "/General Images/presi.jpeg",
+                "/General Images/IMG_5328.JPG"
+              ]} />
               <div className="card-content">
                 <h4 className="card-title">University Events</h4>
                 <p className="card-text">
@@ -64,7 +109,10 @@ const Events = () => {
           {/* Section 6: Cultural Celebrations */}
           <FadeIn delay={300}>
             <div className="card">
-              <img src="/General Images/21 Feb.jpg" alt="21 February" />
+              <EventCarousel images={[
+                "/General Images/21 Feb.jpg",
+                "/General Images/bosonto.jpg"
+              ]} />
               <div className="card-content">
                 <h4 className="card-title">Cultural Celebrations</h4>
                 <p className="card-text">

@@ -19,10 +19,24 @@ const teamData = [
     group: 'top'
   },
   {
+    name: 'Aysha Fairuz',
+    designation: 'General Secretary',
+    email: '2030956@iub.edu.bd',
+    image: '/EB Photos/Aysha.png',
+    group: 'top'
+  },
+  {
     name: 'Avishek Banerjee',
     designation: 'Joint Secretary',
     email: '2221423@iub.edu.bd',
     image: '/EB Photos/Avishek Banerjee.jpeg',
+    group: 'top'
+  },
+  {
+    name: 'Fozle Rahim Noyon',
+    designation: 'Treasurer',
+    email: '2110276@iub.edu.bd',
+    image: '/EB Photos/Noyon.png',
     group: 'top'
   },
   
@@ -41,28 +55,12 @@ const teamData = [
     image: '/EB Photos/Ali Adnan Aadar.jpg',
     group: 'event'
   },
-
-  // Choreography
   {
-    name: 'Tanha Tahbub',
-    designation: 'Head of Choreography',
-    email: '2210332@iub.edu.bd',
-    image: '/EB Photos/Tanha Tahbub.jpeg',
-    group: 'choreo'
-  },
-  {
-    name: 'Monalisa Rahman Mim',
-    designation: 'Assistant Choreographer',
-    email: '2311279@iub.edu.bd',
-    image: '/EB Photos/Monalisa Rahman Mim.jpg',
-    group: 'choreo'
-  },
-  {
-    name: 'Tahima Faizah Khona',
-    designation: 'Assistant Choreographer',
-    email: '2220530@iub.edu.bd',
-    image: '/EB Photos/Tahima Faizah Khona.jpeg',
-    group: 'choreo'
+    name: 'Sye Hasibul Hasan',
+    designation: 'Assistant Event Organizer',
+    email: '2321368@iub.edu.bd',
+    image: '/EB Photos/Hasibul.png',
+    group: 'event'
   },
 
   // Logistics
@@ -88,7 +86,30 @@ const teamData = [
     group: 'logistics'
   },
 
-  // Media
+  // Choreography
+  {
+    name: 'Tanha Tahbub',
+    designation: 'Head of Choreography',
+    email: '2210332@iub.edu.bd',
+    image: '/EB Photos/Tanha Tahbub.jpeg',
+    group: 'choreo'
+  },
+  {
+    name: 'Monalisa Rahman Mim',
+    designation: 'Assistant Choreographer',
+    email: '2311279@iub.edu.bd',
+    image: '/EB Photos/Monalisa Rahman Mim.jpg',
+    group: 'choreo'
+  },
+  {
+    name: 'Tahima Faizah Khona',
+    designation: 'Assistant Choreographer',
+    email: '2220530@iub.edu.bd',
+    image: '/EB Photos/Tahima Faizah Khona.jpeg',
+    group: 'choreo'
+  },
+
+  // Media & PR
   {
     name: 'Md. Sakib Al Hasan',
     designation: 'Head Of Media',
@@ -96,8 +117,6 @@ const teamData = [
     image: '/EB Photos/Md. Sakib Al Hasan.jpeg',
     group: 'media'
   },
-
-  // PR
   {
     name: 'Khandaker Eshrak Alam (Apurbo)',
     designation: 'Head of Public Relations',
@@ -113,7 +132,7 @@ const teamData = [
     group: 'pr'
   },
 
-  // Visualization & Video
+  // Visualization & Creative Team
   {
     name: 'Jahin Awshad Ishad',
     designation: 'Head of Visualization',
@@ -128,11 +147,20 @@ const teamData = [
     image: '/EB Photos/Faruque Azam Alvee.jpeg',
     group: 'visual'
   },
+
+  // Videography
   {
     name: 'Md Osman Goni',
     designation: 'Head Of Videographer',
     email: '2210606@iub.edu.bd',
     image: '/EB Photos/Md Osman Goni.jpeg',
+    group: 'visual'
+  },
+  {
+    name: 'A.B.M Siam Sadat',
+    designation: 'Assistant Videographer',
+    email: '2311798@iub.edu.bd',
+    image: '/EB Photos/Siam.png',
     group: 'visual'
   }
 ];

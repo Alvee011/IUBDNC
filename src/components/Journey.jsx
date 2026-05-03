@@ -1,5 +1,33 @@
+import { useState, useEffect } from 'react';
 import FadeIn from './FadeIn';
 import './Journey.css';
+import './Journey.css';
+
+const StackImages = () => {
+  const images = ['/General Images/everyone.jpg', '/General Images/ebs.jpg'];
+  const [frontIndex, setFrontIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setFrontIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="image-stack-container">
+      {images.map((src, idx) => {
+        const isFront = idx === frontIndex;
+        return (
+          <div key={idx} className={`stack-card ${isFront ? 'front' : 'back'}`}>
+            <img src={src} alt={`Journey ${idx}`} />
+            <div className="image-accent"></div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
 const Journey = () => {
   return (
@@ -12,22 +40,19 @@ const Journey = () => {
           
           <div className="journey-text">
             <p>
-              The journey of the IUB Dance Club began in 2018 with just 15 passionate members who shared a simple love for dance. Over the years, that small group has grown into a vibrant and dynamic family of more than 1000 members, making it one of the most active and energetic communities on campus.
+              The IUB Dance Club started in 2018 with just 15 passionate members who shared a love for dance. Today, it has grown into a vibrant family of over 1000 members, making it one of the most active communities on campus.
             </p>
             <p>
-              Throughout this journey, the club has continuously created opportunities for students to express themselves and develop their skills. We regularly organize exciting dance shows, energetic flashmobs, and dedicated practice sessions that help members improve and prepare for performances. These activities not only build talent but also create strong bonds among members.
+              We regularly organize dance shows, flashmobs, and practice sessions to help members improve their skills and perform with confidence. These activities not only develop talent but also build strong friendships.
             </p>
             <p>
-              Collaboration is an important part of our growth. We actively work with other clubs and participate in various university events, which allows us to explore new ideas and reach wider audiences. By constantly experimenting with different dance styles and creative concepts, we continue to evolve, learn, and keep the spirit of dance alive within the IUB community.
+              Collaboration plays a key role in our growth. We work with other clubs and take part in various university events, exploring new styles and ideas while continuing to spread the joy of dance across the IUB community.
             </p>
           </div>
         </FadeIn>
         
         <FadeIn className="journey-image-wrapper" delay={200}>
-          <div className="journey-image">
-            <img src="/General Images/everyone.jpg" alt="IUB Dance Club Members" />
-            <div className="image-accent"></div>
-          </div>
+          <StackImages />
         </FadeIn>
       </div>
     </section>

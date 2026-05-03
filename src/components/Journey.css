@@ -26,22 +26,42 @@
   position: relative;
 }
 
-.journey-image {
+.image-stack-container {
   position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  perspective: 1200px;
+}
+
+.stack-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.journey-image img {
+.stack-card img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
 }
 
-.journey-image:hover img {
-  transform: scale(1.05);
+.stack-card.front {
+  z-index: 2;
+  transform: translateY(0) scale(1) rotateZ(0deg);
+  opacity: 1;
+}
+
+.stack-card.back {
+  z-index: 1;
+  transform: translateY(30px) scale(0.9) rotateZ(4deg);
+  opacity: 0.8;
 }
 
 .image-accent {
