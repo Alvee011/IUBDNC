@@ -48,6 +48,11 @@ const Events = () => {
           <p className="intro-text">
             Throughout the year, we host and participate in numerous high-energy events. From our signature "Intra-IUB Dance Competition" to our grand festival "Rongobilash," we offer our members the stage to perform across multiple genres. Beyond competitions, our team proudly performs at university orientations, welcoming ceremonies, and cultural festivals like Pohela Boishakh and Saraswati Puja. The IUB Dance Club brings life to every stage it steps on. From large university programs to national platforms and cultural celebrations, our events reflect energy, creativity, and a deep love for dance.
           </p>
+          <div className="image-grid-3" style={{marginTop: '3rem'}}>
+            <img src="/General Images/dance.jpg" alt="Dance Performance" className="grid-img" />
+            <img src="/General Images/Iftar 2.jpeg" alt="Dance Competition" className="grid-img" />
+            <img src="/General Images/booth.jpg" alt="Competition Booth" className="grid-img" />
+          </div>
         </FadeIn>
       </div>
 
@@ -58,10 +63,13 @@ const Events = () => {
           <p className="event-desc">
             One of our proudest achievements is the Intra-IUB Dance Competition 2.0, held on November 9, 11, and 12, 2025. This three-day event brought together talented dancers from across the university, featuring categories like Classical, Folk, K-pop, and Modern. With 35 participants, the competition created an exciting space for performance, creativity, and healthy rivalry.
           </p>
-          <div className="image-grid-3">
-            <img src="/General Images/dance.jpg" alt="Dance Performance" className="grid-img" />
-            <img src="/General Images/Iftar 2.jpeg" alt="Dance Competition" className="grid-img" />
-            <img src="/General Images/booth.jpg" alt="Competition Booth" className="grid-img" />
+          <div className="carousel-grid" style={{marginTop: '2rem'}}>
+            <div className="recent-img-wrapper">
+              <img src="/General Images/Intra all.jpeg" alt="Intra IUB Dance Competition 1" className="carousel-img" />
+            </div>
+            <div className="recent-img-wrapper">
+              <img src="/General Images/us.jpeg" alt="Intra IUB Dance Competition 2" className="carousel-img" />
+            </div>
           </div>
         </FadeIn>
       </div>
@@ -133,8 +141,12 @@ const Events = () => {
             Our journey continues with exciting and dynamic performances. We energized the crowd at JUKTIverse, stealing the spotlight with a high-energy show. We also collaborated with the Football Club for an intra-departmental futsal flashmob, blending sports and dance in a fun and engaging way.
           </p>
           <div className="carousel-grid">
-            <img src="/General Images/juktiverse.jpg" alt="JUKTIverse Performance 1" className="carousel-img" />
-            <img src="/General Images/juktiverse 2.jpg" alt="JUKTIverse Performance 2" className="carousel-img" />
+            <div className="recent-img-wrapper">
+              <img src="/General Images/juktiverse.jpg" alt="JUKTIverse Performance 1" className="carousel-img" />
+            </div>
+            <div className="recent-img-wrapper">
+              <img src="/General Images/juktiverse 2.jpg" alt="JUKTIverse Performance 2" className="carousel-img" />
+            </div>
           </div>
         </FadeIn>
       </div>
